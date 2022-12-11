@@ -35,14 +35,14 @@ def get_filtered_track_df(df, genres_to_include):
     df = df.reset_index(drop=True)
     return df
 
-#genres_to_include = genres = ['dance pop', 'electronic', 'electropop', 'hip hop', 'jazz', 'k-pop', 'latin', 'pop', 'pop rap', 'r&b', 'rock']
-#track_with_year_and_genre = join_genre_and_date(artists_data, albums_data, tracks_data)
-#filtered_track_df = get_filtered_track_df(track_with_year_and_genre, genres_to_include)
+genres_to_include = genres = ['dance pop', 'electronic', 'electropop', 'hip hop', 'jazz', 'k-pop', 'latin', 'pop', 'pop rap', 'r&b', 'rock']
+track_with_year_and_genre = join_genre_and_date(artists_data, albums_data, tracks_data)
+filtered_track_df = get_filtered_track_df(track_with_year_and_genre, genres_to_include)
 
-#filtered_track_df["uri"] = filtered_track_df["uri"].str.replace("spotify:track:", "")
-#filtered_track_df = filtered_track_df.drop(columns=['analysis_url', 'available_markets'])
+filtered_track_df["uri"] = filtered_track_df["uri"].str.replace("spotify:track:", "")
+filtered_track_df = filtered_track_df.drop(columns=['analysis_url', 'available_markets'])
 
-#filtered_track_df.to_csv("filtered_track_df.csv", index=False)
+filtered_track_df.to_csv("filtered_track_df.csv", index=False)
 print(albums_data.head().drop('Unnamed: 0', axis=1))
 print(artists_data.head().drop('Unnamed: 0', axis=1))
 print(tracks_data.head().drop('Unnamed: 0', axis=1))
