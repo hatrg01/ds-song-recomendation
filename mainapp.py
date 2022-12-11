@@ -127,5 +127,5 @@ if st.session_state['start_track_i'] < len(tracks):
                     fig.update_layout(height=400, width=340)
                     st.plotly_chart(fig)
 else:
-        st.write("No songs left to recommend")
+        st.write("No songs left to recommend!")
 
