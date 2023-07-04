@@ -1,5 +1,4 @@
 # Song Recommendation System
-# Data Science
 Dataset: https://www.kaggle.com/datasets/saurabhshahane/spotgen-music-dataset <br/>
 Machine learning: K-NN<br/>
 To run streamlit app on localhost, run on cmd: <i>streamlit run mainapp.py<br/>
